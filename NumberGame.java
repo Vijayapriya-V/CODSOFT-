@@ -7,12 +7,12 @@ public class NumberGame
     {
         int i;
         Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
         int random_no = random.nextInt(100)+1;
-        for(i=0;i<=10;++i)
+        for(i=1;i<=10;++i)
         {
             
             System.out.println("Enter your guessing number (1-100):");
-            Scanner scanner = new Scanner(System.in);
             int guess = scanner.nextInt();
             if(guess < 1 || guess > 100)
             {
@@ -32,10 +32,7 @@ public class NumberGame
                 System.out.println("Your guess number is too high.\nPlay agian!");
             }
         
-        }
-
-        System.out.println("Your attempts");
-        System.out.println(i);
+        }        
         if (i>10)
         {
             System.out.println("You Lose.\nBetter luck next time.");
@@ -44,6 +41,6 @@ public class NumberGame
         {
             System.out.println("Congratulations.\nYour are very lucky.");
         }
-        
+        System.out.println("Your attempts "+i);
     }
 }
